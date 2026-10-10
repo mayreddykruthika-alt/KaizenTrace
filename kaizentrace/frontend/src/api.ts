@@ -1,6 +1,10 @@
 import { IProjectInfo, IDbStatus, IInvestigation } from './types.js';
 
-const API_BASE = '/api';
+const API_BASE =
+  typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:5050/api'
+    : '/api';
 
 export async function fetchHealth(): Promise<{
   status: string;

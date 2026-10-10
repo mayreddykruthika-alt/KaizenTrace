@@ -369,7 +369,7 @@ export const App: React.FC = () => {
               <div>
                 <div style={{ color: 'var(--text-muted)', marginBottom: '0.2rem' }}>Working Tree State</div>
                 <div style={{ fontWeight: 600, color: project?.git?.isClean ? 'var(--success)' : 'var(--warning)' }}>
-                  {project?.git?.isClean ? 'Clean' : `${project?.git?.uncommittedCount} modified file(s)`}
+                  {project?.git ? (project.git.isClean ? 'Clean' : `${project.git.uncommittedCount} modified file(s)`) : 'Checking...'}
                 </div>
               </div>
             </div>

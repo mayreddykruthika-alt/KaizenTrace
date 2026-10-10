@@ -49,8 +49,10 @@ export const Header: React.FC<HeaderProps> = ({
           {/* TeamFlow Project Status */}
           <div className={`badge ${project?.isValid ? 'badge-success' : 'badge-warning'}`} title={project?.projectDir}>
             <GitBranch size={13} />
-            <span>TeamFlow: {project?.git?.commitHash ? project.git.commitHash.substring(0, 7) : 'Connected'}</span>
-            <span style={{ opacity: 0.6 }}>({project?.git?.isClean ? 'Clean' : `${project?.git?.uncommittedCount} modified`})</span>
+            <span>TeamFlow: {project?.git?.commitHash ? project.git.commitHash.substring(0, 7) : project?.isValid ? 'Connected' : 'Connecting...'}</span>
+            {project?.git && (
+              <span style={{ opacity: 0.6 }}>({project.git.isClean ? 'Clean' : `${project.git.uncommittedCount} modified`})</span>
+            )}
           </div>
 
           {/* TeamFlow Server Health */}
