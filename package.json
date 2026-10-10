@@ -1,0 +1,30 @@
+{
+  "name": "kaizentrace-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KaizenTrace — Evidence-Based Software Incident Investigation Workspace",
+  "scripts": {
+    "dev:kaizentrace:backend": "npm --prefix kaizentrace/backend run dev",
+    "dev:kaizentrace:frontend": "npm --prefix kaizentrace/frontend run dev",
+    "dev:kaizentrace": "npm run dev:kaizentrace:backend",
+    "dev:teamflow:backend": "npm --prefix teamflow/backend run dev",
+    "dev:teamflow:frontend": "npm --prefix teamflow/frontend run dev",
+    "dev:teamflow": "npm run dev:teamflow:backend",
+    "test:teamflow": "npm --prefix teamflow/backend test",
+    "test:kaizentrace": "npm --prefix kaizentrace/backend run build && npm --prefix kaizentrace/frontend run build",
+    "test": "npm run test:teamflow",
+    "build:teamflow": "npm --prefix teamflow/backend run build && npm --prefix teamflow/frontend run build",
+    "build:kaizentrace": "npm --prefix kaizentrace/backend run build && npm --prefix kaizentrace/frontend run build",
+    "build": "npm run build:kaizentrace"
+  },
+  "keywords": [
+    "kaizentrace",
+    "teamflow",
+    "incident-investigation",
+    "root-cause-analysis",
+    "git-diff",
+    "evidence-based-debugging"
+  ],
+  "author": "KaizenTrace Team",
+  "license": "ISC"
+}

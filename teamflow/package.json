@@ -1,0 +1,21 @@
+{
+  "name": "teamflow-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TeamFlow - Team Project Management System (Monitored by KaizenTrace)",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "npm run dev:backend",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "seed": "npm --prefix backend run seed",
+    "test": "npm --prefix backend test"
+  },
+  "keywords": [
+    "teamflow",
+    "kaizentrace",
+    "project-management"
+  ],
+  "author": "KaizenTrace Demo Team",
+  "license": "ISC"
+}
